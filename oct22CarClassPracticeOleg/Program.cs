@@ -6,7 +6,7 @@ namespace oct22CarClassPracticeOleg
     {
         static void Main(string[] args)
         {
-            Car myCar = new Car("Chevy", "Camaro", "Red", "MaxOccupancy", "FuelEffeciency", new Odometer(101), new FuelTank(50));
+            Car myCar = new Car("Chevy", "Camaro", "Red", 5, 7.8, new Odometer(101), new FuelTank(50));
 
             Console.WriteLine(myCar.gasTank);
 
