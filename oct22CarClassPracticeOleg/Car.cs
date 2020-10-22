@@ -23,15 +23,12 @@ namespace oct22CarClassPracticeOleg
             Model = "Camero";
             Color = "Red";
             MaximumOccupancy = 5;
-            FuelEfficiency = 8;
+            FuelEfficiency = 8.7;
 
-            //Kms = 100;
-            //Liters = 50;
+            Kms = new Odometer(100);
+            Liters = new FuelTank(50);
         }
-
-    
-
-        public Car(string make, string model, string color, int maxOccupancy, double fuelEff,  Odometer kms,  FuelTank literss)
+        public Car(string make, string model, string color, int maxOccupancy, double fuelEff,  Odometer kms,  FuelTank liters)
         {
             Make = make;
             Model = model;
@@ -39,12 +36,16 @@ namespace oct22CarClassPracticeOleg
             MaximumOccupancy = maxOccupancy;
             FuelEfficiency = fuelEff;
 
-            //Kms = kms;
-            //Liters = literss;
+            Kms = kms;
+            Liters = liters;
         }
 
-
-
+        public override string ToString()
+        {
+            // Formula for kms remaing = FuelLeft/FuelEfficiency
+            string value = (Liters.FuelLeft / FuelEfficiency).ToString();
+            return $"A {Color} {Make} {Model} with {Kms.ToString()} on the odometer, that has enough fuel to travel {value}KM.";
+        }
 
         public void Drive()
         {

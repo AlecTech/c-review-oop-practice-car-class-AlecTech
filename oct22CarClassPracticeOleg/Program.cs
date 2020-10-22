@@ -8,7 +8,7 @@ namespace oct22CarClassPracticeOleg
         {
             Car myCar = new Car("Chevy", "Camaro", "Red", 5, 7.8, new Odometer(101), new FuelTank(50));
 
-            Console.WriteLine(myCar.gasTank);
+            Console.WriteLine(myCar.ToString());
 
             myCar.Drive();
 

@@ -4,13 +4,13 @@ using System.Text;
 
 namespace oct22CarClassPracticeOleg
 {
-    class Odometer
+    public class Odometer
     {
-        public int FuelAmount { get; set; }
+        public int Counter { get; set; }
 
         public Odometer(int km)
         {
-            FuelAmount = km;
+            Counter = km;
         }
     }
 }

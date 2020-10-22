@@ -4,13 +4,13 @@ using System.Text;
 
 namespace oct22CarClassPracticeOleg
 {
-    class FuelTank
+    public class FuelTank
     {
-        public int FuelAmount { get; set; }
+        public int FuelLeft { get; set; }
 
         public FuelTank(int liters)
         {
-            FuelAmount = liters;
+            FuelLeft = liters;
         }
     }
 }
