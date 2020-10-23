@@ -10,6 +10,8 @@ namespace oct22CarClassPracticeOleg
 
             Console.WriteLine(myCar.ToString());
 
+
+
             Console.ReadLine();
             
         }

@@ -56,7 +56,9 @@ namespace oct22CarClassPracticeOleg
 
         public void Drive(int kmsPassed)
         {
-          
+            double fuelSpent = (FuelEfficiency / 100) * kmsPassed;
+            Liters.BurnFuel(fuelSpent);
+            Kms.Increment(kmsPassed);
         }
 
 
