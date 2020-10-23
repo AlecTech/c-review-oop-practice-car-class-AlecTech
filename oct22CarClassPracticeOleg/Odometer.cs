@@ -6,10 +6,7 @@ namespace oct22CarClassPracticeOleg
 {
     public class Odometer
     {
-        public override string ToString()
-        {   //https://stackoverflow.com/questions/7856799/in-c-sharp-how-to-use-string-format-for-a-number-and-pad-left-with-zeros-so-its
-            return String.Format("{0:000000}", _counter);
-        }
+       
         private int _counter;
         const int threshold = 1000000;
 
@@ -43,6 +40,11 @@ namespace oct22CarClassPracticeOleg
         public void Increment(int passedKms)
         {
             Counter += passedKms;
+        }
+
+        public override string ToString()
+        {   //https://stackoverflow.com/questions/7856799/in-c-sharp-how-to-use-string-format-for-a-number-and-pad-left-with-zeros-so-its
+            return String.Format("{0:000000}", _counter);
         }
     }
 }
