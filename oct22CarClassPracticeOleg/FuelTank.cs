@@ -6,60 +6,53 @@ namespace oct22CarClassPracticeOleg
 {
     public class FuelTank
     {
-        private double _capacity;
         private double _level;
 
-        public double Capacity 
+        public double Capacity { get; set; } 
+
+        public double Level
         {
             get
             {
                 return _level;
             }
-            set
+            private set
             {
                 if (value < 0)
-                {            
+                {
                     throw new Exception("Not enough fuel!");
                 }
-                if (value > _capacity)
+                if(value > Capacity)
                 {
-                    _level = _capacity;
-                }
-                /*
-                else if (value > 50)
-                {
-                    _level = 50;
+                    _level = Capacity;
                 }
                 else
-                */
-                _level = value;
+                {
+                    _level = value;
+                }
             }
-
         }
 
         public FuelTank()
         {
-            _capacity = 50;
-            _level = 50;    
+            Capacity = 50;
+            Level = 50;
         }
 
-        public void BurnFuel()
+        public FuelTank(int FuelLevel, int FuelCapacity)
         {
-            //Subtract “litres” from the “Level” property.
+            Capacity = FuelCapacity;
+            Level = FuelLevel;
         }
 
-        public void Fill()
+        public void BurnFuel(double burnAmount)
         {
-            //Add “litres” to the “Level” property.
+            Level -= burnAmount;
         }
 
-        /*
-        public int FuelLeft { get; private set; }
-
-        public FuelTank(int liters)
+        public void Fill(double fillAmount)
         {
-            FuelLeft = liters;
+            Level += fillAmount;
         }
-        */
     }
 }

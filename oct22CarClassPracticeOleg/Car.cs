@@ -26,9 +26,9 @@ namespace oct22CarClassPracticeOleg
             FuelEfficiency = 8.7;
 
             Kms = new Odometer(100);
-            Liters = new FuelTank(50);
+            Liters = new FuelTank(50, 70);
         }
-        public Car(string make, string model, string color, int maxOccupancy, double fuelEff,  Odometer kms,  FuelTank liters)
+        public Car(string make, string model, string color, int maxOccupancy, double fuelEff, Odometer kms, FuelTank liters)
         {
             Make = make;
             Model = model;
@@ -42,9 +42,9 @@ namespace oct22CarClassPracticeOleg
 
         public override string ToString()
         {
-            // Formula for kms remaing = FuelLeft/FuelEfficiency
-            string value = (Liters.Capacity / FuelEfficiency).ToString();
-            return $"A {Color} {Make} {Model} with {Kms.ToString()} on the odometer, that has enough fuel to travel {value}KM.";
+            // Formula for kms remaing = Level *(100/FuelEfficiency)
+            string kmsRemaining = (Liters.Level * (100 / FuelEfficiency)).ToString();
+            return $"A {Color} {Make} {Model} with {Kms.ToString()} on the odometer, that has enough fuel to travel {kmsRemaining} KM.";
         }
 
         public void Drive()
@@ -54,10 +54,9 @@ namespace oct22CarClassPracticeOleg
 
         }
 
-        public void Drive(km)
+        public void Drive(int kmsPassed)
         {
-            // Increment().ToString;
-            //counter
+          
         }
 
 
