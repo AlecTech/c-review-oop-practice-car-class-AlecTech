@@ -43,13 +43,23 @@ namespace oct22CarClassPracticeOleg
         public override string ToString()
         {
             // Formula for kms remaing = FuelLeft/FuelEfficiency
-            string value = (Liters.FuelLeft / FuelEfficiency).ToString();
+            string value = (Liters.Capacity / FuelEfficiency).ToString();
             return $"A {Color} {Make} {Model} with {Kms.ToString()} on the odometer, that has enough fuel to travel {value}KM.";
         }
 
         public void Drive()
         {
+            //drive it should lower Level in FuelTank Class
+            //BurnFuel()
 
         }
+
+        public void Drive(km)
+        {
+            // Increment().ToString;
+            //counter
+        }
+
+
     }
 }

@@ -20,10 +20,10 @@ namespace oct22CarClassPracticeOleg
                 // then tillreset we have 100 - 97 = 3km
                 // so overlap = 4 - 3 = 1km
                 // if statment (97 + 4 > 100 ){  97 = 0; _counter = 0 + 1; }
-                int drove;
+                int _amount;
                 int tillreset = 100 - _counter;
-                int overlap = drove - tillreset;
-                if (_counter + drove > 99)
+                int overlap = _amount - tillreset;
+                if (_counter + _amount > 100)
                 {
                     _counter = 0;
                     _counter = _counter + overlap;
